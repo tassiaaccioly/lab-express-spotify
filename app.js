@@ -38,7 +38,6 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(search.toLowerCase())
     .then((data) => {
-      console.log("The received data from the API: ", data.body.artists.items);
       const response = data.body.artists.items;
       return res.render("artist-search", { artist: response });
     })
@@ -53,7 +52,6 @@ app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
     .getArtistAlbums(artistId, { limit: 10, offset: 20 })
     .then((data) => {
-      console.log("Album information", data.body);
       const albums = data.body.items;
       return res.render("albums", { album: albums });
     })
@@ -68,7 +66,6 @@ app.get("/tracks/:albumId", (req, res, next) => {
   spotifyApi
     .getAlbumTracks(albumId, { limit: 10, offset: 1 })
     .then((data) => {
-      console.log("Album information", data.body.items[0].artists);
       const tracks = data.body.items;
       return res.render("tracks", { track: tracks });
     })

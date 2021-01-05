@@ -49,8 +49,12 @@ nav img {
 .main {
   width: 100vw;
   height: 100vh;
-  margin-top: 90px;
   color: white;
+  margin-bottom: ;
+}
+
+.margin-top-bottom {
+  margin: 90px 0;
 }
 
 .search-form {
@@ -59,7 +63,28 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -60px;
+  margin-top: 40px;
+  z-index: 10;
+}
+
+.home-background {
+  height: 100vh;
+  width: auto;
+  background: url("https://www.itl.cat/pngfile/big/146-1461098_concert-crowd-wallpaper-events-concerts.jpg")
+    center/cover no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin-top: -50px;
+}
+
+.black-radius-filter {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(rgba(0, 0, 0, 0), rgba(25, 20, 20, 1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-form input,
@@ -68,10 +93,8 @@ nav img {
   height: 5rem;
   border: none;
   background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0 2rem;
+  text-align: center;
 }
 
 .search-form input {
@@ -141,7 +164,7 @@ nav img {
 .tracks h2 {
   font-size: 4rem;
   color: rgb(30, 215, 96);
-  margin: 2rem 0 5rem;
+  margin: 10rem 0 3rem;
 }
 
 .tracks table {
@@ -161,6 +184,39 @@ nav img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.about {
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 4rem;
+  margin: 0 auto 2rem;
+  color: rgb(30, 215, 96);
+}
+
+.about p {
+  font-size: 2rem;
+  margin: 3rem 20rem;
+}
+
+.about img {
+  width: auto;
+  height: 50px;
+  margin: 2rem 1rem;
+}
+
+.medium {
+  background-color: rgb(250, 210, 74);
+  border-radius: 50%;
+}
+
 footer {
   width: 100%;
   position: fixed;
@@ -169,6 +225,7 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: rgba(25, 20, 20, 0.9);
+  z-index: 5;
 }
 
 footer a {
