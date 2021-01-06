@@ -15,9 +15,13 @@
       <td style="padding: 0 1.2rem">{{ this.name }}</td>
       <td style="text-align: center">{{ this.track_number }}</td>
       <td style="text-align: center">
+        {{#if this.preview_url}}
         <audio controls src="{{ this.preview_url }}">
           Your browser does not support the <code>audio</code> element.
         </audio>
+        {{else}}
+        There is no preview for this song.
+        {{/if}}
       </td>
     </tr>
     {{/each}}
