@@ -78,6 +78,8 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
-app.listen(4000, () =>
-  console.log("My Spotify project running on port 4000 🎧 🥁 🎸 🔊")
+app.listen(process.env.PORT, () =>
+  console.log(
+    `My Spotify project running on port ${process.env.PORT} 🎧 🥁 🎸 🔊`
+  )
 );
